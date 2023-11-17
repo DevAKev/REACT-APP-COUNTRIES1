@@ -5,10 +5,12 @@
 
 $font-1: "font-1", sans-serif;
 
-$color-1: #61dafb;
+$color-1: #6180fb;
 $color-2: salmon;
 $color-3: #282c34;
+$color-4: rgb(67, 3, 8);
 $white: rgb(243, 243, 243);
+$backgroundImg: url(../assets/img/main.jpg) no-repeat fixed 50% 50%;
 
 @mixin verticalCenter {
   display: flex;
@@ -23,10 +25,11 @@ $white: rgb(243, 243, 243);
 }
 
 body {
-  background: $white;
+  background:  $backgroundImg;
   font-family: $font-1;
   // @include verticalCenter;
 }
+
 li {
   list-style-type: none;
 }

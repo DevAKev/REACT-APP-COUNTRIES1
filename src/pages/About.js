@@ -10,32 +10,19 @@ const About = () => {
       <h1>A propos</h1>
       <br />
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, vitae
-        dolore mollitia commodi eius odit autem quo harum temporibus ut beatae
-        labore placeat sit? Exercitationem similique, placeat mollitia sequi
-        architecto quaerat corrupti perspiciatis quae amet laborum deleniti
-        alias, fuga commodi eveniet, rem possimus porro temporibus! Consequatur
-        iusto modi eos quo placeat porro cum, illo impedit provident quam
-        repudiandae iste nihil eligendi. Rerum odio sint debitis provident
-        inventore ducimus necessitatibus quasi placeat vitae blanditiis
-        doloremque omnis quod recusandae, nisi minima nemo labore natus
-        similique iure sit quam ex! Commodi, atque voluptatibus nihil quas quod,
-        labore debitis modi excepturi delectus doloremque eveniet.
+        Projet pour apprendre les bases de <strong>Node.js</strong> avec la
+        bibliotèque <strong>REACT</strong>.
       </p>
       <br />
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ad vitae
-        libero? Quaerat est odio, a consequuntur, explicabo repudiandae ut modi
-        dignissimos atque accusantium nihil consectetur totam voluptas
-        cupiditate tempore reiciendis animi hic asperiores dolor, perferendis
-        aliquam. Iste hic et nostrum asperiores aut ipsa aperiam voluptates
-        nihil, tempore quos quas, minus eius id? Facere ipsum nulla
-        exercitationem quidem dolorum unde dicta veritatis provident quia soluta
-        maxime ipsa, maiores fugit totam eaque inventore perspiciatis aperiam,
-        magnam eos esse deleniti. Dolorem tempore magni eius, dolores nesciunt
-        molestias esse quibusdam doloribus odit veniam reiciendis sapiente, in
-        eos excepturi aliquid facere tempora voluptates quo!
+        Cette application est conçu pour afficher la liste des drapeaux des Pays
+        officiels du monde ainsi que le nom des capitales et le nombre
+        d'habitants. Un système de filtre est mis en plaçe afin de permettre la
+        sélection du nombre de drapeaux à afficher et un tri donne la
+        possibilité de trier ces 250 drapeaux par continent. Ils sont affichés
+        par population décroissante, du plus peuplé au moins peuplé.
       </p>
+      <br />
     </div>
   );
 };
