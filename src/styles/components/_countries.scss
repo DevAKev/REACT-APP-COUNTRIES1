@@ -1,4 +1,5 @@
 .countries {
+  width: 100%;
   text-align: center;
 
   .radio-container {
@@ -19,6 +20,7 @@
     }
   }
   input[type="text"] {
+    width: 100%;
     padding: 10px;
     border-radius: 40px;
     font-size: 1.3rem;
@@ -77,6 +79,10 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
     display: grid;
+  }
+
+  input[type="text"] {
+    width: 100%;
   }
 
   .radio-container input[type="range"] {

@@ -1,3 +1,4 @@
+/* Ce fichier rassemble les réglages de base de l'application */
 @font-face {
   font-family: "font-1";
   src: url(../assets/font/JosefinSans-Medium.ttf);
@@ -32,4 +33,10 @@ body {
 
 li {
   list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
 }

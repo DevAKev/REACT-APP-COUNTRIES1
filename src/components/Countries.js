@@ -7,6 +7,7 @@ const Countries = () => {
   const [data, setData] = useState([]);
   const [rangeValue, setRangeValue] = useState(36);
   const [selectedRadio, setSelectedRadio] = useState("");
+  const [searchTerm, setSearchTerm] = useState(""); // Nouvel état pour la valeur de recherche
   const radios = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
   // Le useEffect est un hook qui permet d'effectuer des actions au moment du chargement du composant, il se joue lorsque le composant est monté
@@ -38,7 +39,13 @@ const Countries = () => {
           </li>
         ))}
       </ul>
-
+      {/* Champ de recherche par pays */}
+      <input
+        type="text"
+        placeholder="Rechercher un pays..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
       {/* Button reset */}
       {selectedRadio && (
         <button onClick={() => setSelectedRadio("")}>
@@ -50,7 +57,13 @@ const Countries = () => {
         {/* On boucle sur le state data pour afficher les données de l'API */}
         {/* // Filtrage des pays par continent */}
         {data
-          .filter((country) => country.continents[0].includes(selectedRadio))
+          .filter(
+            (country) =>
+              country.continents[0].includes(selectedRadio) &&
+              country.name.common
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase())
+          )
 
           // Tri par population
           .sort((a, b) => b.population - a.population)

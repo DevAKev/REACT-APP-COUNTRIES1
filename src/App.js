@@ -5,7 +5,9 @@ import About from "./pages/About";
 
 const App = () => {
   return (
+    /* BrowserRouter doit contenir toutes les routes de l'application */
     <BrowserRouter>
+      {/* Routes contient toutes les routes de l'application */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
