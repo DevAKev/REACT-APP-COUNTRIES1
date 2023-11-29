@@ -7,11 +7,29 @@ const Countries = () => {
   const [data, setData] = useState([]);
   const [rangeValue, setRangeValue] = useState(36);
   const [selectedRadio, setSelectedRadio] = useState("");
-  const [searchTerm, setSearchTerm] = useState(""); // Nouvel état pour la valeur de recherche
+  const [searchTerm, setSearchTerm] = useState(""); // New State for search bar
+  const [exchangeRates, setExchangeRates] = useState(null); // State for exchange rates
   const radios = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
   // Le useEffect est un hook qui permet d'effectuer des actions au moment du chargement du composant, il se joue lorsque le composant est monté
   useEffect(() => {
+    // On effectue une requête HTTP GET avec Axios
+    // Pour récupérer les données de conversion de devises avec l'API Open Exchange Rates
+    axios
+      .get("https://open.er-api.com/v6/latest/EUR")
+      // promise qui se joue si la requête est un succès
+      .then((exchangeResponse) => {
+        setExchangeRates(exchangeResponse.data.rates);
+      })
+      .catch((error) => {
+        console.error(
+          "Erreur lors de la récupération des taux de change :",
+          error
+        );
+      });
+    // console.log(exchangeRates);
+
+    // Pour récupérer les données des pays
     axios
       .get("https://restcountries.com/v3.1/all")
       .then((res) => setData(res.data));
@@ -41,6 +59,7 @@ const Countries = () => {
       </ul>
       {/* Champ de recherche par pays */}
       <input
+        id="search-bar"
         type="text"
         placeholder="Rechercher un pays..."
         value={searchTerm}
@@ -72,7 +91,8 @@ const Countries = () => {
 
           // Affichage des pays
           .map((country, index) => (
-            <Card key={index} country={country} />
+            // On passe les données de l'API en props du composant Card qui affichera les données des pays et les devises
+            <Card key={index} country={country} exchangeRates={exchangeRates} />
           ))}
       </ul>
     </div>
@@ -80,3 +100,5 @@ const Countries = () => {
 };
 
 export default Countries;
+
+// Comment savoir quelles sont les informations que je peux récupérer sur les pays avec Axios ?

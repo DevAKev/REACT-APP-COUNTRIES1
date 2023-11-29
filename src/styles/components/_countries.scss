@@ -57,7 +57,12 @@
     justify-content: center;
   }
 }
-
+@media screen and (min-width: 1024px) {
+  #search-bar {
+    margin-right: 20px;
+  }
+  
+}
 @media screen and (max-width: 768px) {
   .radio-container {
     width: 50%;
@@ -92,5 +97,10 @@
   .radio-container input[type="radio"] {
     margin-right: 0px;
     margin-bottom: 10px;
+  }
+
+  #search-bar {
+    margin-right: 0px;
+    width: 90%;
   }
 }

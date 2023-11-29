@@ -26,7 +26,8 @@ $backgroundImg: url(../assets/img/main.jpg) no-repeat fixed 50% 50%;
 }
 
 body {
-  background:  $backgroundImg;
+  size-adjust: 100%;
+  background: $backgroundImg;
   font-family: $font-1;
   // @include verticalCenter;
 }
