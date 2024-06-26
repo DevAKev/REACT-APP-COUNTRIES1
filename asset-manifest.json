@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/REACT-APP-COUNTRIES1/static/css/main.f8010a4b.css",
+    "main.js": "/REACT-APP-COUNTRIES1/static/js/main.10a05f00.js",
+    "static/media/galaxy-background.jpg": "/REACT-APP-COUNTRIES1/static/media/galaxy-background.ea8850f462a27b5fb2ac.jpg",
+    "static/media/main.jpg": "/REACT-APP-COUNTRIES1/static/media/main.516fbcd135926107480c.jpg",
+    "static/media/JosefinSans-Medium.ttf": "/REACT-APP-COUNTRIES1/static/media/JosefinSans-Medium.45a5738c27c1bbbecc0c.ttf",
+    "index.html": "/REACT-APP-COUNTRIES1/index.html",
+    "main.f8010a4b.css.map": "/REACT-APP-COUNTRIES1/static/css/main.f8010a4b.css.map",
+    "main.10a05f00.js.map": "/REACT-APP-COUNTRIES1/static/js/main.10a05f00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8010a4b.css",
+    "static/js/main.10a05f00.js"
+  ]
+}
