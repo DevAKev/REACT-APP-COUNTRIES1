@@ -2,6 +2,7 @@
   "name": "cours-react-1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://devakev.github.io/REACT-APP-COUNTRIES1",
   "dependencies": {
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
@@ -20,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
